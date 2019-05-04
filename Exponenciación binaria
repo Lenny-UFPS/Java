@@ -1,0 +1,13 @@
+// Exponenciación binaria - BigInteger [rapidez]
+
+BigInteger s = new BigInteger(sc.next());
+
+String string = Integer.toBinaryString(s.intValue());
+
+for (int i = string.length() - 1; i >= 0; i--) {
+                    if (string.charAt(i) == '1') {
+                        int po = (int) Math.pow(2, contador);
+                        rta = rta.multiply(base.pow(po));
+                    }
+                    contador++;
+                }
